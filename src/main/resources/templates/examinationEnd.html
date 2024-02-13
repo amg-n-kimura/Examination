@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title th:text="${title}"></title>
+</head>
+<body>
+<h1 style="text-align: center;">終了</h1>
+<div style="text-align: left; color: #000000; font-size: 16px;">
+    お疲れ様でした。<br />
+    <form method="post" action="/">
+        <input type="hidden" th:name="questionNumber" th:value="${questionNumber}" />
+
+        <span th:if="${questionNumber} != 0">
+            <input type="submit" name="before" value="前へ" />
+        </span>
+    </form>
+
+</div>
+
+</body>
+</html>
